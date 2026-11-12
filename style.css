@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #100d25, #25205b, #101b3c);
+    color: white;
+    min-height: 100vh;
+    padding: 40px 15px;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #c4a5ff;
+}
+
+header p {
+    color: #c5c5dc;
+}
+
+.task-form, .task-section {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #f4f2ff;
+    color: #222;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7955e8, #397ce8);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#addBtn {
+    width: 100%;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filters {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.task-item {
+    background: rgba(255,255,255,0.09);
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-info {
+    overflow-wrap: anywhere;
+}
+
+.task-info p {
+    color: #c7c4e0;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.delete-btn {
+    background: #dc4164;
+}
+
+.edit-btn {
+    background: #8b69d9;
+}
+
+.empty {
+    text-align: center;
+    padding: 25px;
+    color: #c5c5dc;
+}
+
+@media (max-width: 550px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
